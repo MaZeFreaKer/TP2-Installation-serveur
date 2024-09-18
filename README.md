@@ -7,4 +7,4 @@ Dans ce TP2 d'installation de serveur et service, nous allons énumérer étapes
 
 ## Étape 1: Vérification de l'installation
 
-![Vérification#1](images/verif#1.PNG)
+![Vérification#1](images/verif.PNG)
