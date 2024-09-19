@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres
+    volumes:
+      - drupal-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: drupal
+      POSTGRES_USER: postgres
+  drupal:
+    build: .
+    image: mon_drupal
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    volumes:
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/sites
+    environment:
+      DRUPAL_DB_HOST: db
+      DRUPAL_DB_NAME: drupal
+      DRUPAL_DB_USER: postgres
+      DRUPAL_DB_PASS: admin
+volumes:
+  drupal-data:
