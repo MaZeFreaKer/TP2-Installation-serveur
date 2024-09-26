@@ -25,3 +25,4 @@ services:
       DRUPAL_DB_PASS: admin
 volumes:
   drupal-data:
+# JPD : Selon la documentation de drupal, tu dois créer un volume pour chaque environnement.
